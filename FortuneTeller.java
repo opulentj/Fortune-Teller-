@@ -17,6 +17,7 @@ public static void main(String[]args){
      System.out.println(colors[i++]);
 
      }
+     int chosenColor = pickColor(colors); 
      printNumberOptions(chosenColor);
      System.out.print(pickFirstNumber());
     }
