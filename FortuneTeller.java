@@ -9,10 +9,9 @@ public static void main(String[]args){
 
      String name = scanner.nextLine();
 
-     boolean play = false;
      System.out.printf ("Hello %s, Are you ready to play? Please enter Yes or No ",name);
-     String gameAns = scanner.nextBoolean();
-    if(play==true){
+     boolean play = scanner.nextBoolean();
+    while(play){
      System.out.println("Please enter 4 colors with spaces: ");
      String userColors = scanner.nextLine().trim();
      String[] colors = userColors.split(" ");
