@@ -5,11 +5,7 @@ public class FortuneTeller{
 public static void main(String[]args){
   Scanner scanner = new Scanner (System.in);
 
-  System.out.printf("%nWelcome to the Virtual Paper Fortune Teller!%n What is your name: ");
-
-     String name = scanner.nextLine();
-
-     System.out.printf ("Hello %s, Are you ready to play? Please enter Yes or No ",name);
+     printInstructions();
      boolean play = scanner.nextBoolean();
     while(play){
      System.out.println("Please enter 4 colors with spaces: ");
@@ -64,6 +60,12 @@ public static void main(String[]args){
   int firstNumber=TextIO.getlnInt();
   return firstNumber;
   }
+  public static void printInstructions(){
+     System.out.printf("%nWelcome to the Virtual Paper Fortune Teller!%n What is your name: ");
+     String name = scanner.nextLine();
+     System.out.printf ("Hello %s, Are you ready to play? Please enter Yes or No ",name);
+  }
+    
 
 
 
