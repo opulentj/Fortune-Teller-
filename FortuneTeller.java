@@ -22,7 +22,7 @@ public static void main(String[]args){
 
      }
      int chosenColor =  pickColor(colors);
-     System.out.println(chosenColor);
+    
     }
 
 }
