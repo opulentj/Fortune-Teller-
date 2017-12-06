@@ -21,6 +21,7 @@ public static void main(String[]args){
      printNumberOptions(chosenColor);
      System.out.print(pickFirstNumber());
     }
+      System.out.printf("bye!");
 
 }
      public static int Count(int n){
