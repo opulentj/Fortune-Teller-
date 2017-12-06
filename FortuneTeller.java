@@ -1,5 +1,5 @@
 import java.util.Scanner;
-
+import Fortune;
 public class FortuneTeller{
 
 public static void main(String[]args){
