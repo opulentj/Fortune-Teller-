@@ -11,7 +11,7 @@ public static void main(String[]args){
      printColors(colors);
      int chosenColor = pickColor(colors);
      printNumberOptions(chosenColor);
-     System.out.print(pickFirstNumber());
+     pickFirstNumber();
      System.out.printf("Do you want to play again?");
      play = TextIO.getlnBoolean( );
    } while (play); {
