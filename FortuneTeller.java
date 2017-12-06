@@ -21,8 +21,8 @@ public static void main(String[]args){
      System.out.println(colors[i++]);
 
      }
-     int chosenColor =  pickColor(colors);
-    
+     printNumberOptions(chosenColor);
+     System.out.print(pickFirstNumber());
     }
 
 }
@@ -48,6 +48,27 @@ public static void main(String[]args){
     return length;
 
   }
+    public static void printNumberOptions(int chosenColor){
+
+  if (chosenColor%2==0){
+    System.out.printf("0, 1, 5, 4");
+  }
+  else{
+    System.out.printf("2, 3, 7, 6");
+  }
+
+
+  }
+  public static int pickFirstNumber(){
+  System.out.printf("These are your number options, please choose a number.");
+  int firstNumber=TextIO.getlnInt();
+  return firstNumber;
+  }
+
+
+
+
+
 
 }
 
