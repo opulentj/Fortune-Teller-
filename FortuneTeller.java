@@ -11,7 +11,8 @@ public static void main(String[]args){
 
      boolean play = false;
      System.out.printf ("Hello %s, Are you ready to play? Please enter Yes or No ",name);
-     String gameAns = scanner.nextLine();
+     String gameAns = scanner.nextBoolean();
+    if(play==true){
      System.out.println("Please enter 4 colors with spaces: ");
      String userColors = scanner.nextLine().trim();
      String[] colors = userColors.split(" ");
@@ -23,6 +24,7 @@ public static void main(String[]args){
      }
      int chosenColor =  pickColor(colors);
      System.out.println(chosenColor);
+    }
 
 }
      public static int Count(int n){
