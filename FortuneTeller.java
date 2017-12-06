@@ -4,26 +4,34 @@ public class FortuneTeller{
 
 public static void main(String[]args){
   Scanner scanner = new Scanner (System.in);
-
+  boolean play = true;
+  do {
      printInstructions();
-     boolean play = scanner.nextBoolean();
-    while(play){
-     System.out.println("Please enter 4 colors with spaces: ");
+     System.out.printf("%nPlease enter 4 colors with spaces: ");
      String userColors = scanner.nextLine().trim();
      String[] colors = userColors.split(" ");
      int i = 0;
      System.out.println("The colors you chose are: ");
+
+
      while(i < colors.length) {
      System.out.println(colors[i++]);
 
      }
-     int chosenColor = pickColor(colors); 
+
+
+     int chosenColor = pickColor(colors);
      printNumberOptions(chosenColor);
      System.out.print(pickFirstNumber());
-    }
-      System.out.printf("bye!");
 
-}
+     System.out.printf("Do you want to play again?");
+     play = TextIO.getlnBoolean( );
+   } while (play); {
+     System.out.print("Good luck in your future");
+
+    }
+  }
+
      public static int Count(int n){
       int count = 0;
        for(int i =0; i<n;i++){
@@ -58,16 +66,17 @@ public static void main(String[]args){
 
   }
   public static int pickFirstNumber(){
-  System.out.printf("These are your number options, please choose a number.");
+  System.out.printf("%nThese are your number options, please choose a number: ");
   int firstNumber=TextIO.getlnInt();
   return firstNumber;
   }
   public static void printInstructions(){
+    Scanner scanner = new Scanner (System.in);
      System.out.printf("%nWelcome to the Virtual Paper Fortune Teller!%n What is your name: ");
      String name = scanner.nextLine();
-     System.out.printf ("Hello %s, Are you ready to play? Please enter Yes or No ",name);
+     System.out.printf ("%n Hello %s, Let's get started!",name);
   }
-    
+
 
 
 
