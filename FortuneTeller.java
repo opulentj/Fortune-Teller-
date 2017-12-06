@@ -7,23 +7,11 @@ public static void main(String[]args){
   boolean play = true;
   do {
      printInstructions();
-     System.out.printf("%nPlease enter 4 colors with spaces: ");
-     String userColors = scanner.nextLine().trim();
-     String[] colors = userColors.split(" ");
-     int i = 0;
-     System.out.println("The colors you chose are: ");
-
-
-     while(i < colors.length) {
-     System.out.println(colors[i++]);
-
-     }
-
-
+     String[] colors = stepOne();
+     printColors(colors);
      int chosenColor = pickColor(colors);
      printNumberOptions(chosenColor);
      System.out.print(pickFirstNumber());
-
      System.out.printf("Do you want to play again?");
      play = TextIO.getlnBoolean( );
    } while (play); {
@@ -47,12 +35,9 @@ public static void main(String[]args){
       for (int i = 0; i < colors.length; i++){
        if (oneColor.equals(colors[i]) ) {
           length = oneColor.length();
-
        }
-
-    }
-    return length;
-
+      }
+        return length;
   }
     public static void printNumberOptions(int chosenColor){
 
@@ -76,6 +61,21 @@ public static void main(String[]args){
      String name = scanner.nextLine();
      System.out.printf ("%n Hello %s, Let's get started!",name);
   }
+  public static String[] stepOne(){
+    Scanner scanner = new Scanner (System.in);
+    System.out.printf("%nPlease enter 4 colors with spaces: ");
+    String userColors = scanner.nextLine().trim();
+    String[] color = userColors.split(" ");
+    return color;
+  }
+  public static void printColors(String[] array){
+    int i = 0;
+    System.out.println("The colors you chose are: ");
+    while(i < array.length) {
+    System.out.println(array[i++]);
+
+    }
+  }
 
 
 
@@ -84,4 +84,3 @@ public static void main(String[]args){
 
 
 }
-
