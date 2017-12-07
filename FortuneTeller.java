@@ -4,21 +4,21 @@ public class FortuneTeller{
 
 public static void main(String[]args){
   Scanner scanner = new Scanner (System.in);
-  boolean play = true;
-  do {
-     printInstructions();
+
+  printInstructions();
      String[] colors = stepOne();
      printColors(colors);
      int chosenColor = pickColor(colors);
      printNumberOptions(chosenColor);
      System.out.print(pickFirstNumber());
-     System.out.printf("Do you want to play again?");
-     play = TextIO.getlnBoolean( );
-   } while (play); {
+     TextIO.readFile("Fortunes.csv");
+     TextIO.getln();
+     fortunatrial arrayObject = new fortunatrial();
+     arrayObject.randFortunes();
      System.out.print("Good luck in your future");
 
     }
-  }
+  
   /**
   Count() will count from 0 to the number that the user chooses
   @param n this is the number that the user chooses
