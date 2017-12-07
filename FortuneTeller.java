@@ -18,19 +18,6 @@ public static void main(String[]args){
      System.out.print("Good luck in your future");
 
     }
-  
-  /**
-  Count() will count from 0 to the number that the user chooses
-  @param n this is the number that the user chooses
-  @return count holds the number of times that the fortune teller is being randomized
-  */
-    public static int Count(int n){
-      int count = 0;
-       for(int i =0; i<n;i++){
-        count++;
-       }
-        return count;
-     }
      /**
      pickColor() gives the length of the color that the user chooses
      @param colors an array that holds all the colors that the user had chosed before
@@ -44,10 +31,10 @@ public static void main(String[]args){
       for (int i = 0; i < colors.length; i++){
        if (oneColor.equals(colors[i]) ) {
           length = oneColor.length();
-       }
+        }
       }
         return length;
-    }
+      }
   /**
   printnumberOptions() prints the number options given the color that the user chooses
   @param chosenColor the number that the user picks
